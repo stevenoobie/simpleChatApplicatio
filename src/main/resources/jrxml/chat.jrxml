@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dashboard" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75b0fcb0-7a76-4c0b-8ec4-bde3e5966348">
+    <parameter name="messages" class="java.lang.Integer">
+    </parameter>
+
+    <background>
+        <band/>
+    </background>
+    <title>
+        <band height="72">
+            <frame>
+                <reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="e5d96083-ab19-4bc2-95f0-eb803e9df5cd"/>
+                <staticText>
+                    <reportElement x="20" y="20" width="277" height="43" forecolor="#FFFFFF" uuid="3bd3dd09-29d4-4521-b77f-dc3d90006be4"/>
+                    <textElement>
+                        <font size="34" isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[SimpleChatApp]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="f34555d9-56af-44a9-830c-b5e306504f22"/>
+                    <textElement textAlignment="Right">
+                        <font size="14" isBold="false"/>
+                    </textElement>
+                    <text><![CDATA[Chat report]]></text>
+                </staticText>
+            </frame>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="13"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="21">
+            <line>
+                <reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="b6f6ccc3-4597-4a2e-87f0-15a049bd9e03"/>
+            </line>
+            <staticText>
+                <reportElement mode="Opaque" x="0" y="0" width="555" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="be93b411-697a-48de-b4f7-7357143b3dcd" >
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a9003eb-bace-4b8f-b50c-e98246bc2736"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Number Of Messages]]></text>
+            </staticText>
+
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="5da0c0d1-eb10-4c98-9661-78ad288c7682"/>
+            </line>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="0" width="555" height="20" uuid="34732339-0ee2-4c98-9b14-cae5cfd1384f">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a9003eb-bace-4b8f-b50c-e98246bc2736"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{messages}]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </detail>
+    <columnFooter>
+        <band/>
+    </columnFooter>
+
+    <summary>
+        <band/>
+    </summary>
+</jasperReport>
